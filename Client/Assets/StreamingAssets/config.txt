@@ -1,0 +1,13 @@
+http://202.195.195.157										公共地址
+/wcf/ashx/userlogin.ashx										登陆
+/wcf/userreg.aspx											注册
+/wcf/userreg.aspx											忘记密码
+/wcf/ashx/UserExpList.ashx?stepNo=10									用户可选实验服务			
+/wcf/ashx/UserExpInfo.ashx										更新用户的积分、在线时长、实验流程状态
+/wcf/ashx/ExpWinClose.ashx										实验窗口能否关闭服务
+/wcf/stuNote/notelist.aspx										//实验笔记
+/wcf/examlist.aspx											//试题库
+/wcf/ashx/ExpDoc.ashx										//视频库 //知识库
+/wcf/ashx/userlogin.ashx										帮助一
+/wcf/ashx/userlogin.ashx										帮助二
+/wcf/ashx/userlogin.ashx										帮助三
