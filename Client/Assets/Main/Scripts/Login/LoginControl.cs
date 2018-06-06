@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LoginControl : MonoBehaviour {
 
@@ -73,8 +74,15 @@ public class LoginControl : MonoBehaviour {
         }
         else
         {
-            StartCoroutine(Login());
-            GameMrg.mInstance.LoadPopUpLoading();
+            if (GameMrg.mInstance.isNet)
+            {
+                StartCoroutine(Login());
+                GameMrg.mInstance.LoadPopUpLoading();
+            }
+            else
+            {
+                SceneManager.LoadScene("Select");
+            }
         }
     }
 

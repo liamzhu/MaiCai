@@ -11,10 +11,13 @@ public class GameMrg : MonoBehaviour {
     public string registURL = string.Empty;                                                         //注册
     public string forgetPassWordURL = string.Empty;                                                 //忘记密码
 
+    public bool isNet = true;
+
     private void Awake()
     {
         mInstance = this;
         ReadConfigByTxt();
+        DontDestroyOnLoad(gameObject);
     }
 
     // Use this for initialization
@@ -33,7 +36,7 @@ public class GameMrg : MonoBehaviour {
         string tempStr = "Prefab/Loading";
         GameObject tempObj = Resources.Load(tempStr) as GameObject;
         objLoading = Instantiate(tempObj) as GameObject;
-        objLoading.transform.parent = GameObject.Find("UI Root").transform;
+        //objLoading.transform.parent = GameObject.Find("UI Root").transform;
         objLoading.transform.localScale = Vector3.one;
         objLoading.transform.localPosition = Vector3.zero;
     }
