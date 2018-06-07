@@ -5,10 +5,7 @@ using UnityEngine;
 public class SelectRenWu : MonoBehaviour {
 
     SelectControl sControl;
-
-    public ChooseItem renWu1;
-    public ChooseItem renWu2;
-    public ChooseItem renWu3;
+    public ChooseItem taskTemplate;
 
 	// Use this for initialization
 	void Start () {

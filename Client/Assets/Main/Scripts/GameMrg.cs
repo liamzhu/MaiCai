@@ -11,6 +11,9 @@ public class GameMrg : MonoBehaviour {
     public string registURL = string.Empty;                                                         //注册
     public string forgetPassWordURL = string.Empty;                                                 //忘记密码
 
+    public List<Good> allGoodList = new List<Good>();
+    public Task curTask = null;
+
     public bool isNet = true;
 
     private void Awake()
@@ -76,6 +79,30 @@ public class GameMrg : MonoBehaviour {
             string tempStr = arrlist[3].ToString();
             int tempInt = tempStr.IndexOf("\t");
             forgetPassWordURL = tempStr.Substring(0, tempInt);
+        }
+    }
+
+    void CreateGoodLibrary() {
+        {
+            allGoodList.Add(new Good(GoodType.Fruit, "苹果"));
+            allGoodList.Add(new Good(GoodType.Fruit, "杏子"));
+            allGoodList.Add(new Good(GoodType.Fruit, "香蕉"));
+            allGoodList.Add(new Good(GoodType.Fruit, "橙子"));
+            allGoodList.Add(new Good(GoodType.Fruit, "草莓"));
+            allGoodList.Add(new Good(GoodType.Fruit, "杨桃"));
+        }
+        {
+            allGoodList.Add(new Good(GoodType.Meat, "牛肉"));
+            allGoodList.Add(new Good(GoodType.Meat, "牛排"));
+            allGoodList.Add(new Good(GoodType.Meat, "牛尾"));
+            allGoodList.Add(new Good(GoodType.Meat, "猪腿"));
+            allGoodList.Add(new Good(GoodType.Meat, "猪肉"));
+            allGoodList.Add(new Good(GoodType.Meat, "猪排"));
+        }
+        {
+            allGoodList.Add(new Good(GoodType.PoultryEgg, "鸡"));
+            allGoodList.Add(new Good(GoodType.PoultryEgg, "鸭"));
+            allGoodList.Add(new Good(GoodType.PoultryEgg, "鹅"));
         }
     }
 }
