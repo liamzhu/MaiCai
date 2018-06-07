@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectChangJing : MonoBehaviour {
 
@@ -17,5 +18,15 @@ public class SelectChangJing : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void ClickOnEnter(){
+		if (changJing1.objSelect.activeSelf) {
+			//超市购物
+		} 
+		else {
+			//网购
+			SceneManager.LoadScene("WebBuy");
+		}
 	}
 }
