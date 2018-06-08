@@ -10,8 +10,9 @@ public class SelectControl : MonoBehaviour {
     public List<Task> taskList = null;
 
 	// Use this for initialization
-	void Awake () {
+	void Start () {
         taskList = CreateTask();
+        sRenWu.InitTaskList();
     }
 	
 	// Update is called once per frame
@@ -19,9 +20,14 @@ public class SelectControl : MonoBehaviour {
 		
 	}
 
+    /// <summary>
+    /// 创建任务
+    /// </summary>
+    /// <returns></returns>
     List<Task> CreateTask()
     {
         List<Task> taskList = new List<Task>();
+
         {
             Task task = new Task();
             int[] randArray = Util.GetRandomSequence(GameMrg.mInstance.allGoodList.Count, 5);

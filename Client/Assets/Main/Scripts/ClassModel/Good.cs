@@ -8,6 +8,7 @@ public class Good{
     public string icon;
 
     public Good(GoodType mType,string mName) {
-
+        type = mType;
+        name = mName;
     }
 }

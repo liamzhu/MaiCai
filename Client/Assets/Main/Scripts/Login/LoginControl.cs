@@ -61,7 +61,10 @@ public class LoginControl : MonoBehaviour {
         }
     }
 
-    public void ClickLogin() {
+    public void ClickLogin() { 
+        SceneManager.LoadScene("Select");
+        return;
+
         if (userNameInput.text == string.Empty)
         {
             erroTip.gameObject.SetActive(true);

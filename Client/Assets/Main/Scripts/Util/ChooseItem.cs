@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ChooseItem : MonoBehaviour {
     public GameObject objSelect;
-
     ChooseItem[] chooseItems;
 	// Use this for initialization
 	void Start () {

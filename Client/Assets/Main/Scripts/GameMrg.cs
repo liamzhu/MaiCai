@@ -20,6 +20,7 @@ public class GameMrg : MonoBehaviour {
     {
         mInstance = this;
         ReadConfigByTxt();
+        CreateGoodLibrary();    //初始化物品库
         DontDestroyOnLoad(gameObject);
     }
 
