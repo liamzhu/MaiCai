@@ -21,12 +21,12 @@ public class SelectRenWu : MonoBehaviour {
 
     public void InitTaskList() {
         transParent.localPosition = new Vector3(0,0,0);
-        transParent.sizeDelta = new Vector2(1530+(sControl.taskList.Count-3)*500,532);
+        transParent.sizeDelta = new Vector2(1530+(sControl.taskList.Count-2)*650,532);
         for (int i = 0; i < sControl.taskList.Count; i++) {
             GameObject objItem = Instantiate(taskTemplate.gameObject) as GameObject;
             objItem.SetActive(true);
             objItem.transform.parent = transParent.transform;
-            objItem.transform.localPosition = new Vector3(178+500*i,0,0);
+            objItem.transform.localPosition = new Vector3(50+650*i,0,0);
             //objItem.transform.localScale = Vector3.one;
             itemList.Add(objItem.GetComponent<ChooseItem>());
         }
