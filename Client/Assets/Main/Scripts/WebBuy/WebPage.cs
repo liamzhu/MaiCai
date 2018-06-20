@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WebPage : MonoBehaviour {
-    public ChooseItem[] chooseItems;
-
+    //public Toggle[] chooseTypes;
     public GameObject objTemplate;
     public RectTransform objContent;
 
@@ -19,15 +19,19 @@ public class WebPage : MonoBehaviour {
             itemPool.Add(objItem.GetComponent<WebPageGoodItem>());
         }
 
-        //set all as default
-        chooseItems[0].ClickChoose();
-        CreateGoodList(GoodType.All);
+        //
+        //set default
+        OnChooseValueChange(0);
     }
 
     // Update is called once per frame
     void Update () {
 		
 	}
+
+    public void OnChooseValueChange(int typeNum) {
+        CreateGoodList((GoodType)typeNum);
+    }
 
     void CreateGoodList(GoodType gType) {
         //hide all

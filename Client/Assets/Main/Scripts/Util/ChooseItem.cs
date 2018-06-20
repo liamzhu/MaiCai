@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public delegate void ChooseItemChange();
+
 public class ChooseItem : MonoBehaviour {
     public GameObject objSelect;
     ChooseItem[] chooseItems;
+    //public ChooseItemChange changeFunc;
 
 	// Use this for initialization
 	void Start () {
@@ -29,5 +32,9 @@ public class ChooseItem : MonoBehaviour {
             chooseItems[i].objSelect.SetActive(false);
         }
         objSelect.SetActive(true);
+
+        //if (changeFunc != null) {
+        //    changeFunc();
+        //}
     }
 }
