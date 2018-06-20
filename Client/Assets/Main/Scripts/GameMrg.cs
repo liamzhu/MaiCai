@@ -13,6 +13,7 @@ public class GameMrg : MonoBehaviour {
 
     public List<Good> allGoodList = new List<Good>();
     public Task curTask = null;
+    public List<Good> curBuyGoodList = new List<Good>();
 
     public bool isNet = true;
 

@@ -19,7 +19,7 @@ public class WebPage : MonoBehaviour {
             itemPool.Add(objItem.GetComponent<WebPageGoodItem>());
         }
 
-        //
+        GameMrg.mInstance.curBuyGoodList.Clear();
         //set default
         OnChooseValueChange(0);
     }
