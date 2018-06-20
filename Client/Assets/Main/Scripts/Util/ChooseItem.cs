@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ChooseItem : MonoBehaviour {
     public GameObject objSelect;
     ChooseItem[] chooseItems;
+
 	// Use this for initialization
 	void Start () {
         chooseItems = transform.parent.GetComponentsInChildren<ChooseItem>();
@@ -17,7 +18,7 @@ public class ChooseItem : MonoBehaviour {
     
 	}
 
-    void ClickChoose()
+    public void ClickChoose()
     {
         if (objSelect.activeSelf)
         {
