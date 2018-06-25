@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ShoppingCart : MonoBehaviour {
     public Text num;
 
+    public CartDetail cartDetail;
 	// Use this for initialization
 	void Start () {
 		
@@ -29,6 +30,6 @@ public class ShoppingCart : MonoBehaviour {
 	}
 
     public void ClickOnCart() {
-
+        cartDetail.gameObject.SetActive(true);
     }
 }
