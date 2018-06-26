@@ -15,7 +15,8 @@ public class WebPage : MonoBehaviour {
         //先生成100个
         for (int i = 0; i < 100; i++) {
             GameObject objItem = Instantiate(objTemplate) as GameObject;
-            objItem.transform.parent = objContent.transform;
+            //objItem.transform.parent = objContent.transform;
+			objItem.transform.SetParent (objContent.transform);
             itemPool.Add(objItem.GetComponent<WebPageGoodItem>());
         }
 

@@ -7,6 +7,7 @@ public class CartItem : MonoBehaviour {
     public Image icon;
     public Text nameStr;
 
+	CartDetail cartDetail;
     Good goodInfo;
 	// Use this for initialization
 	void Start () {
@@ -18,12 +19,14 @@ public class CartItem : MonoBehaviour {
 		
 	}
 
-    public void SetShow(Good good) {
+	public void SetShow(Good good,CartDetail cd) {
+		cartDetail = cd;
         goodInfo = good;
         nameStr.text = good.name;
     }
 
     public void ClickOnDelete() {
-        
+		GameMrg.mInstance.curBuyGoodList.Remove (goodInfo);
+		cartDetail.SetShow ();
     }
 }

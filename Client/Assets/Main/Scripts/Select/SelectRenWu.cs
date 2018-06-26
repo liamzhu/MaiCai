@@ -25,7 +25,8 @@ public class SelectRenWu : MonoBehaviour {
         for (int i = 0; i < sControl.taskList.Count; i++) {
             GameObject objItem = Instantiate(taskTemplate.gameObject) as GameObject;
             objItem.SetActive(true);
-            objItem.transform.parent = transParent.transform;
+            //objItem.transform.parent = transParent.transform;
+			objItem.transform.SetParent(transParent.transform);
             objItem.transform.localPosition = new Vector3(50+650*i,0,0);
             //objItem.transform.localScale = Vector3.one;
             itemList.Add(objItem.GetComponent<ChooseItem>());

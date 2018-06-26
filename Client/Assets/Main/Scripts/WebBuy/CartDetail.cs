@@ -19,7 +19,8 @@ public class CartDetail : MonoBehaviour {
             for (int i = 0; i < 30; i++)
             {
                 GameObject objItem = Instantiate(objTemplate) as GameObject;
-                objItem.transform.parent = objContent.transform;
+                //objItem.transform.parent = objContent.transform;
+				objItem.transform.SetParent(objContent.transform);
                 itemPool.Add(objItem.GetComponent<CartItem>());
             }
         }
@@ -31,18 +32,19 @@ public class CartDetail : MonoBehaviour {
 		
 	}
 
-    void SetShow() {
+    public void SetShow() {
         for (int i = 0; i < itemPool.Count; i++) {
             itemPool[i].gameObject.SetActive(false);
         }
         //GameMrg.mInstance.curBuyGoodList;   
-        objContent.localPosition = new Vector3(objContent.localPosition.x, 0, 0);
+
+		objContent.transform.localPosition = new Vector3(0, 0, 0);
         objContent.sizeDelta = new Vector2(1904, GameMrg.mInstance.curBuyGoodList.Count * 200 + 350);
         for (int i = 0; i < GameMrg.mInstance.curBuyGoodList.Count; i++) {
             Good curGood = GameMrg.mInstance.curBuyGoodList[i];
-            itemPool[i].transform.localPosition = new Vector3(0,290 - i*180f,0);
+            itemPool[i].transform.localPosition = new Vector3(952,-108 - i*180f,0);
             itemPool[i].gameObject.SetActive(true);
-            itemPool[i].SetShow(curGood);
+			itemPool[i].SetShow(curGood,this);
         }
     }
 
