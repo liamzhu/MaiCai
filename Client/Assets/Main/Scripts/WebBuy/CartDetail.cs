@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CartDetail : MonoBehaviour {
 
@@ -54,6 +55,13 @@ public class CartDetail : MonoBehaviour {
 
     //确定了
     public void ClickOnConfirm() {
+        float result = GameMrg.mInstance.CheckResult();
+        result = result * 100;
+        string tip = "正确率为  "+result.ToString("f2") + "%";
+        GameMrg.mInstance.LoadPopUpTip(tip, FinishBack);
+    }
 
+    void FinishBack() {
+        SceneManager.LoadScene("Select");
     }
 }

@@ -61,7 +61,7 @@ public class LoginControl : MonoBehaviour {
         }
     }
 
-    public void ClickLogin() { 
+    public void ClickLogin() {
         SceneManager.LoadScene("Select");
         return;
 

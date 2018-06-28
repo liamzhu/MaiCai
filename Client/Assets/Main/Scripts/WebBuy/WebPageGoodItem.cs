@@ -26,9 +26,16 @@ public class WebPageGoodItem : MonoBehaviour {
     }
 
     public void ClickOnBuy() {
+        if (GameMrg.mInstance.curBuyGoodList.Count >= GameMrg.mInstance.curTask.goodList.Count) {
+            //Debug.Log("已达购买最大数目限制！");
+            GameMrg.mInstance.LoadPopUpTip("已达购买最大数目限制");
+            return;
+        }
+
         if (GameMrg.mInstance.curBuyGoodList.Contains(goodInfo))
         {
-            Debug.Log("这个已经买过啦！");
+            //Debug.Log("这个已经买过啦！");
+            GameMrg.mInstance.LoadPopUpTip("这个已经买过啦");
         }
         else
         {

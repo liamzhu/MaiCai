@@ -51,6 +51,16 @@ public class GameMrg : MonoBehaviour {
         Destroy(objLoading);
     }
 
+    public void LoadPopUpTip(string tip, ClickEvent eventYes = null, ClickEvent eventNo = null) {
+        string tempStr = "Prefab/PopUpTip";
+        GameObject tempObj = Resources.Load(tempStr) as GameObject;
+        GameObject objTip = Instantiate(tempObj) as GameObject;
+        //objLoading.transform.parent = GameObject.Find("UI Root").transform;
+        objTip.transform.localScale = Vector3.one;
+        objTip.transform.localPosition = Vector3.zero;
+        objTip.GetComponent<PopUpTipControl>().SetShow(tip, eventYes, eventNo);
+    }
+
     public void ReadConfigByTxt()
     {
         StreamReader sr = File.OpenText(Application.streamingAssetsPath + "/config.txt");
@@ -82,6 +92,25 @@ public class GameMrg : MonoBehaviour {
             int tempInt = tempStr.IndexOf("\t");
             forgetPassWordURL = tempStr.Substring(0, tempInt);
         }
+    }
+
+    //检查正确率
+    public float CheckResult() {
+        int totalNum = curTask.goodList.Count;
+        int rightNum = 0;
+        for (int i = 0; i < totalNum; i++) {
+            Good desGood = curTask.goodList[i];
+            for (int j = 0; j < curBuyGoodList.Count; j++) {
+                Good buyGood = curBuyGoodList[j];
+                if (desGood.name == buyGood.name) {
+                    rightNum++;
+                    break;
+                }
+            }
+        }
+
+        float result = (float)rightNum / (float)totalNum;
+        return result;
     }
 
     void CreateGoodLibrary() {
