@@ -19,7 +19,14 @@ public class BuyListControl : MonoBehaviour {
 
             curObj.GetComponent<BuyListItem>().SetGood(GameMrg.mInstance.curTask.goodList[i]);
         }
+
+        StartCoroutine(WaitToHide(5.0f));
 	}
+
+    IEnumerator WaitToHide(float time) {
+        yield return new WaitForSeconds(time);
+        gameObject.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update () {
