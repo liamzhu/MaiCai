@@ -71,13 +71,13 @@ public class CameraTargeting : MonoBehaviour
 			IHighlightingTarget ht = targetTransform.GetComponentInParent<IHighlightingTarget>();
 			if (ht != null)
 			{
-				if (Input.GetButtonDown(buttonFire1)) { ht.OnHighlightingFire1Down(); }
-				else if (Input.GetButton(buttonFire1)) { ht.OnHighlightingFire1Held(); }
-				else if (Input.GetButtonUp(buttonFire1)) { ht.OnHighlightingFire1Up(); }
-
-				if (Input.GetButtonDown(buttonFire2)) { ht.OnHighlightingFire2Down(); }
-				else if (Input.GetButton(buttonFire2)) { ht.OnHighlightingFire2Held(); }
-				else if (Input.GetButtonUp(buttonFire2)) { ht.OnHighlightingFire2Up(); }
+//				if (Input.GetButtonDown(buttonFire1)) { ht.OnHighlightingFire1Down(); }
+//				else if (Input.GetButton(buttonFire1)) { ht.OnHighlightingFire1Held(); }
+//				else if (Input.GetButtonUp(buttonFire1)) { ht.OnHighlightingFire1Up(); }
+//
+//				if (Input.GetButtonDown(buttonFire2)) { ht.OnHighlightingFire2Down(); }
+//				else if (Input.GetButton(buttonFire2)) { ht.OnHighlightingFire2Held(); }
+//				else if (Input.GetButtonUp(buttonFire2)) { ht.OnHighlightingFire2Up(); }
 
 				ht.OnHighlightingMouseOver();
 			}

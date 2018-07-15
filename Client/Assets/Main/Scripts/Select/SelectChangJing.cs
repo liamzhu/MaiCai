@@ -14,6 +14,7 @@ public class SelectChangJing : MonoBehaviour {
     // Use this for initialization
     void Start () {
         sControl = transform.parent.GetComponent<SelectControl>();
+		changJing1.objSelect.SetActive (true);
     }
 	
 	// Update is called once per frame
@@ -26,7 +27,7 @@ public class SelectChangJing : MonoBehaviour {
             sChooseTool.gameObject.SetActive(true);
         } 
 		else {
-			SceneManager.LoadScene("WebBuy");
+			//SceneManager.LoadScene("WebBuy");
 		}
 	}
 }

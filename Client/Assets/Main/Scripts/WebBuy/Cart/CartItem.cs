@@ -28,5 +28,6 @@ public class CartItem : MonoBehaviour {
     public void ClickOnDelete() {
 		GameMrg.mInstance.curBuyGoodList.Remove (goodInfo);
 		cartDetail.SetShow ();
+		PlayerControl.instance.RemoveGood3D (goodInfo);
     }
 }

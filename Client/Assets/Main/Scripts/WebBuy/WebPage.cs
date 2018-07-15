@@ -19,8 +19,6 @@ public class WebPage : MonoBehaviour {
 			objItem.transform.SetParent (objContent.transform);
             itemPool.Add(objItem.GetComponent<WebPageGoodItem>());
         }
-
-        GameMrg.mInstance.curBuyGoodList.Clear();
         //set default
         OnChooseValueChange(0);
     }

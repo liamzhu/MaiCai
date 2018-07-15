@@ -121,19 +121,37 @@ public class GameMrg : MonoBehaviour {
             allGoodList.Add(new Good(GoodType.Fruit, "橙子"));
             allGoodList.Add(new Good(GoodType.Fruit, "草莓"));
             allGoodList.Add(new Good(GoodType.Fruit, "杨桃"));
+			allGoodList.Add(new Good(GoodType.Fruit, "樱桃"));
+
+			allGoodList.Add(new Good(GoodType.Fruit, "猕猴桃"));
+			allGoodList.Add(new Good(GoodType.Fruit, "椰子"));
+			allGoodList.Add(new Good(GoodType.Fruit, "桔子"));
+			allGoodList.Add(new Good(GoodType.Fruit, "李子"));
+			allGoodList.Add(new Good(GoodType.Fruit, "梨"));
+			allGoodList.Add(new Good(GoodType.Fruit, "桃子"));
+			allGoodList.Add(new Good(GoodType.Fruit, "荔枝"));
+			allGoodList.Add(new Good(GoodType.Fruit, "葡萄"));
+			allGoodList.Add(new Good(GoodType.Fruit, "哈密瓜"));
+
+			allGoodList.Add(new Good(GoodType.Fruit, "柠檬"));
+			allGoodList.Add(new Good(GoodType.Fruit, "枇杷"));
+			allGoodList.Add(new Good(GoodType.Fruit, "芒果"));
+			allGoodList.Add(new Good(GoodType.Fruit, "菠萝"));
+			allGoodList.Add(new Good(GoodType.Fruit, "柚子"));
+			allGoodList.Add(new Good(GoodType.Fruit, "西瓜"));
         }
-        {
-            allGoodList.Add(new Good(GoodType.Meat, "牛肉"));
-            allGoodList.Add(new Good(GoodType.Meat, "牛排"));
-            allGoodList.Add(new Good(GoodType.Meat, "牛尾"));
-            allGoodList.Add(new Good(GoodType.Meat, "猪腿"));
-            allGoodList.Add(new Good(GoodType.Meat, "猪肉"));
-            allGoodList.Add(new Good(GoodType.Meat, "猪排"));
-        }
-        {
-            allGoodList.Add(new Good(GoodType.PoultryEgg, "鸡"));
-            allGoodList.Add(new Good(GoodType.PoultryEgg, "鸭"));
-            allGoodList.Add(new Good(GoodType.PoultryEgg, "鹅"));
-        }
+//        {
+//            allGoodList.Add(new Good(GoodType.Meat, "牛肉"));
+//            allGoodList.Add(new Good(GoodType.Meat, "牛排"));
+//            allGoodList.Add(new Good(GoodType.Meat, "牛尾"));
+//            allGoodList.Add(new Good(GoodType.Meat, "猪腿"));
+//            allGoodList.Add(new Good(GoodType.Meat, "猪肉"));
+//            allGoodList.Add(new Good(GoodType.Meat, "猪排"));
+//        }
+//        {
+//            allGoodList.Add(new Good(GoodType.PoultryEgg, "鸡"));
+//            allGoodList.Add(new Good(GoodType.PoultryEgg, "鸭"));
+//            allGoodList.Add(new Good(GoodType.PoultryEgg, "鹅"));
+//        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectRenWu : MonoBehaviour {
     SelectControl sControl;
@@ -21,16 +22,19 @@ public class SelectRenWu : MonoBehaviour {
 
     public void InitTaskList() {
         transParent.localPosition = new Vector3(0,0,0);
-        transParent.sizeDelta = new Vector2(1530+(sControl.taskList.Count-2)*650,532);
+        transParent.sizeDelta = new Vector2(1580+(sControl.taskList.Count-3)*600,532);
         for (int i = 0; i < sControl.taskList.Count; i++) {
             GameObject objItem = Instantiate(taskTemplate.gameObject) as GameObject;
             objItem.SetActive(true);
             //objItem.transform.parent = transParent.transform;
 			objItem.transform.SetParent(transParent.transform);
-            objItem.transform.localPosition = new Vector3(50+650*i,0,0);
+            objItem.transform.localPosition = new Vector3(50+600*i,0,0);
             //objItem.transform.localScale = Vector3.one;
             itemList.Add(objItem.GetComponent<ChooseItem>());
+			objItem.GetComponentInChildren<Text> ().text = "任务" + (i + 1).ToString ();
         }
+
+		itemList [0].objSelect.SetActive (true);
     }
 
     public void ClickNext()

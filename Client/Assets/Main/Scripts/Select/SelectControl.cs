@@ -13,6 +13,8 @@ public class SelectControl : MonoBehaviour {
 	void Start () {
         taskList = CreateTask();
         sRenWu.InitTaskList();
+
+		GameMrg.mInstance.curBuyGoodList.Clear();
     }
 	
 	// Update is called once per frame
